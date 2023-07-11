@@ -1,0 +1,33 @@
+// .dashboard__content {
+//   margin-top: 50px;
+// }
+
+.dashboard {
+  background-color: var(--bg);
+  // .navbar {
+  //   // height: var(--navbar-height);
+  // }
+  > nav {
+    // width: var(--aside-width);
+    // margin-top: 60px;
+    background-color: var(--aside-bg);
+    border-right: 1px solid var(--aside-border);
+    z-index: 1002;
+    bottom: 0;
+    // position: fixed;
+    // top: 0;
+    // box-shadow: none;
+    transition: all 0.4s ease-in-out;
+
+    hr {
+      border-color: var(--aside-border);
+    }
+  }
+  &__content {
+    width: calc(100% - var(--aside-width));
+    margin-left: var(--aside-width);
+    padding: 20px;
+    // margin-top: var(--navbar-height);
+    min-height: calc(100vh - var(--navbar-height));
+  }
+}

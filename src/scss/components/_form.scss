@@ -1,0 +1,18 @@
+form {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  label {
+    text-align: left;
+    color: var(--text-color);
+  }
+  .in-valid {
+    margin-top: -5px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+    text-transform: capitalize;
+  }
+}

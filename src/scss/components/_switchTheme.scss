@@ -1,0 +1,63 @@
+$circle: 30px;
+//  var(--switch-inner): #333;
+// var(--switch-light): #eee;
+
+.switch {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    width: calc($circle * 2);
+    height: $circle;
+    background-color: var(--switch-dark);
+    border-radius: 25px;
+    transition: 0.4s;
+
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: auto;
+      left: 0;
+      bottom: 0;
+      width: $circle;
+      height: $circle;
+      border-radius: 100%;
+      border: 2px solid var(--switch-dark);
+      background-color: var(--switch-light);
+      color: var(--switch-dark);
+      transition: 0.4s;
+      content: "\f185";
+      font-family: "Font Awesome 5 Pro";
+      font-size: 1rem;
+    }
+  }
+
+  &__input:checked + .switch__label {
+    background-color: var(--switch-light);
+
+    &::before {
+      left: calc(100% - $circle);
+      border-color: var(--switch-light);
+      background-color: var(--switch-dark);
+      color: var(--switch-light);
+      content: "\f186";
+    }
+  }
+}

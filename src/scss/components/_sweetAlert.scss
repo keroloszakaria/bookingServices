@@ -1,0 +1,23 @@
+.swal2-popup {
+  background-color: var(--bg) !important;
+  color: var(--text-color) !important;
+}
+.swal2-styled.swal2-confirm {
+  background-color: var(--alert-color) !important;
+  color: var(--text-color) !important;
+}
+.swal2-styled.swal2-deny,
+.swal2-styled.swal2-cancel {
+  background-color: var(--text-mute) !important;
+  color: var(--bg) !important;
+}
+
+.swal2-actions {
+  gap: 20px;
+}
+
+.swal2-actions {
+  button {
+    padding: 0.5rem 1rem;
+  }
+}

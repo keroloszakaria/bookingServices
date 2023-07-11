@@ -1,0 +1,24 @@
+{
+  "test": "hi",
+  "SIGN_IN": {
+    "HEADING": "Sign in to Houya",
+    "NO_HAVE": " Don't have an account ?",
+    "BUTTON": "Sign In",
+    "LINK": "Signup"
+  },
+  "SIGN_UP": {
+    "HEADING": "Sign up to Houya",
+    "ALREADY_HAVE": "Already have an account ?",
+    "BUTTON": "Sign Up",
+    "LINK": "Signin"
+  },
+  "SIGN_WITH": {
+    "TITLE": "Sign In with"
+  },
+  "RESET_PASSWORD": {
+    "HEADING": "Forget Password",
+    "REMEMBER_ME": "Wait, I remember my password...",
+    "BUTTON": "Send Reset Link",
+    "LINK": "Click here"
+  }
+}

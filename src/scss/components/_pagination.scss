@@ -1,0 +1,12 @@
+.v-pagination__list {
+  li {
+    button {
+      color: var(--pagi-color);
+    }
+    &.v-pagination__item--is-active {
+      button {
+        color: var(--pagi-active-color) !important;
+      }
+    }
+  }
+}

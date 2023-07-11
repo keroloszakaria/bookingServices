@@ -1,0 +1,43 @@
+.social-btn {
+  color: #fff;
+  align-items: center;
+  height: calc(1rem + 1.5em + 2px);
+  width: calc(1rem + 1.5em + 2px);
+  border-radius: 0.25rem;
+  padding: 0;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid transparent;
+
+  &.facebook-btn {
+    background-color: var(--facebook-bg);
+    &:hover {
+      background-color: transparent;
+      color: var(--facebook-bg);
+      border: 1px solid var(--facebook-bg);
+    }
+  }
+  &.google-btn {
+    background-color: var(--googleplus-bg);
+    &:hover {
+      background-color: transparent;
+      color: var(--googleplus-bg);
+      border: 1px solid var(--googleplus-bg);
+    }
+  }
+  &.github-btn {
+    background-color: var(--github-bg);
+    &:hover {
+      background-color: transparent;
+      color: var(--github-bg);
+      border: 1px solid var(--github-bg);
+    }
+  }
+  &.twitter-btn {
+    background-color: var(--twitter-bg);
+    &:hover {
+      background-color: transparent;
+      color: var(--twitter-bg);
+      border: 1px solid var(--twitter-bg);
+    }
+  }
+}

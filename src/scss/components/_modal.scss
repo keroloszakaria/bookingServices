@@ -1,0 +1,12 @@
+.v-card--variant-elevated,
+.v-card--variant-flat {
+  background-color: var(--login-popup-bg);
+  padding: 1rem 0;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: var(--text-color);
+}

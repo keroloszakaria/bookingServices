@@ -1,0 +1,29 @@
+html,
+body {
+  background-color: var(--bg);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+hr {
+  margin: 0.5rem 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+//
+//
+
+.f-sm {
+  font-size: var(--small-font-size) !important;
+}
+.f-normal {
+  font-size: var(--normal-font-size) !important;
+}

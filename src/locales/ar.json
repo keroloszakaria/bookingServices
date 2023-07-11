@@ -1,0 +1,13 @@
+{
+  "SIGN_IN": {
+    "HEADING": "س in to Houya",
+    "EMAIL": {
+      "LABEL": "Email",
+      "PLACEHOLDER": "Enter Your Email"
+    },
+    "PASSWORD": {
+      "LABEL": "Password",
+      "PLACEHOLDER": "Enter Your Password"
+    }
+  }
+}

@@ -1,53 +1,29 @@
 <template>
-  <a v-if="isExternalLink" :href="to" target="_blank">
-    <span>{{ name }}</span>
+  <a v-if="isExternalLink()" :href="props.to" target="_blank">
+    <span>{{ props.name }}</span>
   </a>
-  <router-link v-else :to="to" :class="classList">
-    <i v-if="showIcon" :class="icon" class="fa-fw fa-light"></i>
-    <span>{{ name }}</span>
+  <router-link v-else :to="props.to" :class="props.classList">
+    <fontAwesomeIcon v-if="props.showIcon" :icon="props.icon" />
+    <span>{{ props.name }}</span>
   </router-link>
 </template>
 
-<script>
-export default {
-  name: "customLink",
-  props: {
-    classList: {
-      type: String,
-      default: () => {
-        return "";
-      },
-    },
-    to: {
-      type: String,
-      default: () => {
-        return "";
-      },
-    },
-    name: {
-      type: String,
-      default: () => {
-        return "";
-      },
-    },
-    showIcon: {
-      type: Boolean,
-      default: () => {
-        return false;
-      },
-    },
-    icon: {
-      type: String,
-      default: () => {
-        return "";
-      },
-    },
-  },
-  computed: {
-    isExternalLink() {
-      return typeof this.to === "string" && this.to.startsWith("http");
-    },
-  },
+<script setup>
+import fontAwesomeIcon from "@/components/basics/fontAwesomeIcon";
+
+import { defineProps, ref } from "vue";
+const props = defineProps({
+  classList: String,
+  to: String,
+  name: String,
+  showIcon: Boolean,
+  icon: String,
+});
+
+const link = ref(props.to);
+
+const isExternalLink = () => {
+  return typeof link.value === "string" && link.value.startsWith("http");
 };
 </script>
 

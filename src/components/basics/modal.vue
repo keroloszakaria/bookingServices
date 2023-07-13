@@ -13,23 +13,12 @@
   </v-dialog>
 </template>
 
-<script>
-export default {
-  name: "basic-modal",
-  data() {
-    return {
-      dialog: false,
-    };
-  },
-  props: {
-    buttonName: {
-      type: String,
-      default() {
-        return "";
-      },
-    },
-  },
-};
+<script setup>
+import { defineProps, ref } from "vue";
+defineProps({
+  buttonName: String,
+});
+const dialog = ref(false);
 </script>
 
 <style></style>

@@ -1,0 +1,111 @@
+.cutomersView {
+  display: flex;
+  width: 100%;
+  margin-left: var(--aside-width);
+
+  .aside {
+    position: fixed;
+    width: var(--customer-aside-width);
+    height: 100%;
+    $sort-width: 35px;
+    &:hover {
+      .aside__sort {
+        right: calc($sort-width * -1);
+      }
+    }
+    &__sort {
+      position: absolute;
+      width: $sort-width;
+      height: 100%;
+      background-color: white;
+      right: 0;
+      overflow-y: scroll;
+      transition: 0.4s;
+      z-index: 8;
+      ul {
+        li button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          width: 100%;
+          transition: 0.4s;
+          &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.1);
+          }
+        }
+      }
+    }
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: grey;
+      z-index: 9;
+      padding: 20px 10px;
+    }
+    &__head {
+      form {
+        .form-group {
+          position: relative;
+          i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--placeholder-color);
+            font-size: var(--smaller-font-size);
+          }
+          input {
+            border-radius: 20px;
+            padding-left: 35px;
+            font-size: var(--smaller-font-size);
+          }
+        }
+      }
+    }
+    &__body {
+      .customersList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .customer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          $imageSize: 50px;
+          &__image {
+            width: $imageSize;
+            height: $imageSize;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          &__info {
+            width: calc(100% - ($imageSize + 10px));
+
+            * {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            h6 {
+              font-size: var(--normal-font-size);
+            }
+            p {
+              font-size: var(--smaller-font-size);
+            }
+          }
+        }
+      }
+    }
+  }
+  .dashboard__content {
+    width: calc(100% - (var(--aside-width) + var(--customer-aside-width)));
+    margin-left: calc(var(--aside-width) + var(--customer-aside-width));
+  }
+}

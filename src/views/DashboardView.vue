@@ -1,13 +1,11 @@
 <template>
   <v-layout class="dashboard">
     <AdminSidebar />
-    <v-main class="dashboard__content">
-      <router-view v-slot="{ Component }">
-        <Transition name="scale" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </router-view>
-    </v-main>
+    <router-view v-slot="{ Component }">
+      <Transition name="scale" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </router-view>
   </v-layout>
 </template>
 

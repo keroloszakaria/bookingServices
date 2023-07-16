@@ -25,9 +25,21 @@ const routes = [
     component: () => import("@/views/DashboardView"),
     children: [
       {
+        path: "/myspace",
+        name: "myspace",
+        component: () => import("@/views/AdminView/MySpaceView"),
+      },
+      {
         path: "/customers",
         name: "customers",
-        component: () => import("@/views/AdminView/CustomersView"),
+        component: () => import("@/views/AdminView/customers/CustomersView"),
+        children: [
+          {
+            path: "add-cutomer",
+            name: "addcutomer",
+            component: () => import("@/views/AdminView/customers/AddCustomer"),
+          },
+        ],
       },
       //   {
       //     path: "/facts",

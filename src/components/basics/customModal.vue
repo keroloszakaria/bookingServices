@@ -1,11 +1,13 @@
 <template>
   <v-dialog v-model="dialog" width="auto">
     <template v-slot:activator="{ props }">
-      <v-btn class="btn" v-bind="props"> {{ buttonName }} </v-btn>
+      <v-btn type="button" :class="buttonClass" v-bind="props">
+        <slot name="button"></slot>
+      </v-btn>
     </template>
 
     <v-card>
-      <slot></slot>
+      <slot name="content"></slot>
       <v-btn class="icon close" @click="dialog = false">
         <i class="fa fa-times"></i>
       </v-btn>
@@ -16,7 +18,7 @@
 <script setup>
 import { defineProps, ref } from "vue";
 defineProps({
-  buttonName: String,
+  buttonClass: String,
 });
 const dialog = ref(false);
 </script>

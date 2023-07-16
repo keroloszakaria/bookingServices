@@ -1,7 +1,9 @@
 input[type="password"],
 input[type="text"],
 input[type="file"],
-input[type="email"] {
+input[type="number"],
+input[type="email"],
+select {
   display: block;
   width: 100%;
   color: var(--text-color);

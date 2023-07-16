@@ -1,5 +1,5 @@
 {
-  "test": "hi",
+  "test": "s",
   "SIGN_IN": {
     "HEADING": "Sign in to Houya",
     "NO_HAVE": " Don't have an account ?",
@@ -20,5 +20,37 @@
     "REMEMBER_ME": "Wait, I remember my password...",
     "BUTTON": "Send Reset Link",
     "LINK": "Click here"
+  },
+  "BUTTONS": {
+    "ADD": "Add",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  },
+  "SLIDER": {
+    "ADD_NEW": "Add Slide",
+    "SEARCH": "Search for title..."
+  },
+  "FEATRUES": {
+    "ADD_NEW": "Add Feature",
+    "SEARCH": "Search for Feature..."
+  },
+  "FACT": {
+    "ADD_NEW": "Add Fact",
+    "ADD_ICON": "Add Icon",
+    "SEARCH": "Search for Fact..."
+  },
+  "CHOOSEUS": {
+    "ADD_NEW": "Add Reason"
+  },
+  "BLOG": {
+    "ADD_NEW": "Add Post",
+    "SEARCH": "Search for Post..."
+  },
+  "TEAM": {
+    "ADD_NEW": "Add Member",
+    "VIEW_SELECTED": "View Profile",
+    "SEARCH": "Search for name or title...",
+    "PROJECTS": "Projects",
+    "TASKS": "Tasks"
   }
 }

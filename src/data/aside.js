@@ -2,7 +2,7 @@ const asideLinks = [
   {
     name: "my space",
     icon: "fa-briefcase",
-    to: "/",
+    to: "/myspace",
   },
   {
     name: "calender",

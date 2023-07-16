@@ -1,8 +1,5 @@
 <template>
   <section class="auth h-screen">
-    <a href="#" class="">
-      <img class="" src="@/assets/logo.png" alt="logo" />
-    </a>
     <div class="auth__popup">
       <h1 class="head">
         {{ $t("SIGN_IN.HEADING") }}

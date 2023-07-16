@@ -1,14 +1,7 @@
 <template>
   <Form class="v-form" @submit="onSubmit">
     <div
-      v-for="{
-        as,
-        name,
-        placeholder,
-        label,
-        children,
-        ...attrs
-      } in schema.fields"
+      v-for="{ as, name, placeholder, label, children, ...attrs } in schema"
       :key="name"
       class="mb-4 form-group"
     >

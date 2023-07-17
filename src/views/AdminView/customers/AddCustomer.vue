@@ -1,62 +1,97 @@
 <template>
   <v-main class="dashboard__content">
-    <DynamicForm
-      @formValues="loginHandle"
-      buttonName="Add Customer"
-      :schema="fields"
-    />
+    <Form class="v-form" @submit="onSubmit">
+      <v-row>
+        <v-col class="form-group" cols="12" sm="4">
+          <v-text-field
+            :rules="nameRules"
+            label="First name"
+            required
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        <v-col class="form-group" cols="12" sm="4">
+          <v-text-field
+            :rules="nameRules"
+            label="First name"
+            required
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+        <v-col class="form-group" cols="12" sm="4">
+          <v-text-field
+            :rules="nameRules"
+            label="First name"
+            required
+            variant="outlined"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </Form>
   </v-main>
 </template>
 
 <script setup>
-import DynamicForm from "@/components/basics/DynamicForm.vue";
-import * as Yup from "yup";
+const nameRules = [
+  (value) => {
+    if (value) return true;
 
-const fields = [
-  {
-    label: "Fact English",
-    name: "title_en",
-    type: "text",
-    as: "input",
-    placeholder: "Enter Developer Title",
-    rules: Yup.string().required(),
+    return "Name is required.";
   },
-  {
-    label: "Fact Arabic",
-    name: "title_ar",
-    type: "text",
-    as: "input",
-    placeholder: "Enter Developer Title",
-    rules: Yup.string().required(),
-  },
-  {
-    label: "Fact Number",
-    name: "number",
-    type: "number",
-    as: "input",
-    placeholder: "Enter Developer Title",
-    rules: Yup.string().required(),
-  },
-  {
-    label: "customer tybe",
-    name: "hi",
-    type: "hi",
-    as: "select",
-    placeholder: "Enter Developer Title",
-    rules: Yup.string().required(),
-    children: [
-      {
-        tag: "option",
-        text: "aj",
-        value: "ass",
-      },
-    ],
+  (value) => {
+    if (value?.length <= 10) return true;
+
+    return "Name must be less than 10 characters.";
   },
 ];
 
-const loginHandle = (values) => {
-  console.log(values);
-};
+// import * as Yup from "yup";
+
+// const fields = [
+//   {
+//     label: "Name",
+//     name: "name",
+//     type: "text",
+//     as: "input",
+//     placeholder: "Enter Customer Name",
+//     rules: Yup.string().required(),
+//   },
+//   {
+//     label: "Email",
+//     name: "email",
+//     type: "email",
+//     as: "input",
+//     placeholder: "Enter Customer Email",
+//     rules: Yup.string().required(),
+//   },
+//   {
+//     label: "Mobile",
+//     name: "Mobile",
+//     type: "tel",
+//     as: "input",
+//     placeholder: "Enter Customer Mobile",
+//     rules: Yup.string().required(),
+//   },
+//   {
+//     label: "customer tybe",
+//     name: "hi",
+//     type: "hi",
+//     as: "select",
+//     placeholder: "Enter Customer Title",
+//     rules: Yup.string().required(),
+//     children: [
+//       {
+//         tag: "option",
+//         text: "aj",
+//         value: "ass",
+//       },
+//     ],
+//   },
+// ];
+
+// const loginHandle = (values) => {
+//   console.log(values);
+// };
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,30 +1,62 @@
 <template>
   <v-main class="dashboard__content">
+    <h2>New Customer</h2>
     <Form class="v-form" @submit="onSubmit">
       <v-row>
+        <v-col class="form-group custome__input" cols="12" sm="4">
+          <div class="custome__input">
+            <input placeholder=" " type="text" />
+            <label for="">Name</label>
+            <fontAwesomeIcon icon="fa-user" />
+          </div>
+        </v-col>
+        <v-col class="form-group custome__input" cols="12" sm="4">
+          <div class="custome__input">
+            <input placeholder=" " type="email" />
+            <label for="">Email</label>
+            <fontAwesomeIcon icon="fa-user" />
+          </div>
+        </v-col>
+
         <v-col class="form-group" cols="12" sm="4">
-          <v-text-field
-            :rules="nameRules"
-            label="First name"
-            required
-            variant="outlined"
-          ></v-text-field>
+          <div class="custome__input">
+            <input placeholder=" " type="tel" />
+            <label for="">Mobile</label>
+            <fontAwesomeIcon icon="fa-user" />
+          </div>
         </v-col>
         <v-col class="form-group" cols="12" sm="4">
-          <v-text-field
-            :rules="nameRules"
-            label="First name"
-            required
-            variant="outlined"
-          ></v-text-field>
+          <div class="custome__input">
+            <input placeholder=" " type="text" />
+            <label for="">Address</label>
+            <fontAwesomeIcon icon="fa-map" />
+          </div>
         </v-col>
         <v-col class="form-group" cols="12" sm="4">
-          <v-text-field
-            :rules="nameRules"
-            label="First name"
-            required
-            variant="outlined"
-          ></v-text-field>
+          <div class="custome__input">
+            <input placeholder=" " type="text" />
+            <label for="">Country</label>
+            <fontAwesomeIcon icon="fa-map" />
+          </div>
+        </v-col>
+        <v-col class="form-group" cols="12" sm="4">
+          <div class="custome__input">
+            <input placeholder=" " type="text" />
+            <label for="">City</label>
+            <fontAwesomeIcon icon="fa-map" />
+          </div>
+        </v-col>
+        <v-col class="form-group" cols="12" sm="4">
+          <div class="custome__input">
+            <input placeholder=" " type="text" />
+            <label for="">Time Zone</label>
+            <fontAwesomeIcon icon="fa-map" />
+          </div>
+        </v-col>
+        <v-col class="form-group" cols="12" sm="4">
+          <customButton classList="btn addNew" type="submit">
+            Add
+          </customButton>
         </v-col>
       </v-row>
     </Form>
@@ -32,18 +64,8 @@
 </template>
 
 <script setup>
-const nameRules = [
-  (value) => {
-    if (value) return true;
-
-    return "Name is required.";
-  },
-  (value) => {
-    if (value?.length <= 10) return true;
-
-    return "Name must be less than 10 characters.";
-  },
-];
+import fontAwesomeIcon from "@/components/basics/fontAwesomeIcon.vue";
+import customButton from "@/components/basics/customButton.vue";
 
 // import * as Yup from "yup";
 

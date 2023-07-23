@@ -35,6 +35,12 @@ const routes = [
         component: () => import("@/views/AdminView/customers/CustomersView"),
         children: [
           {
+            path: "/customers",
+            name: "cutomerdetails",
+            component: () =>
+              import("@/views/AdminView/customers/CustomerDetails"),
+          },
+          {
             path: "add-cutomer",
             name: "addcutomer",
             component: () => import("@/views/AdminView/customers/AddCustomer"),

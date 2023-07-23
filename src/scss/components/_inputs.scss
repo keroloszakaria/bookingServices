@@ -62,3 +62,58 @@ input:-webkit-autofill:active {
 .theme--light.v-text-field > .v-input__control > .v-input__slot:before {
   border-color: #90c143;
 }
+
+@mixin inputTyped {
+  // & + label + i {
+  // color: var(--main-color);
+  // }
+  & + label {
+    top: 2%;
+    left: 12px;
+    // color: var(--main-color);
+    background-color: var(--input-bg);
+  }
+}
+@mixin inputInvalid {
+  border: 1px solid var(--alert-color);
+}
+@mixin inputNotTyped {
+  i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--input-border);
+    transition: color 0.4s ease-in-out;
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: var(--input-border);
+    transition: 0.4s ease-in-out;
+    padding: 0 2px;
+  }
+}
+
+.custome__input {
+  position: relative;
+  input {
+    padding-left: 35px;
+    // &:placeholder-shown {
+    //   @include inputNotTyped;
+    // }
+    &:not(:placeholder-shown) {
+      @include inputTyped;
+    }
+
+    &:focus {
+      @include inputTyped;
+    }
+    &:invalid {
+      @include inputInvalid;
+    }
+  }
+  @include inputNotTyped;
+}

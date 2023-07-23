@@ -40,22 +40,26 @@
         <div class="aside__body">
           <ul class="customersList">
             <li class="customer">
-              <div class="customer__image">
-                <img src="https://via.placeholder.com/350x150" alt="" />
-              </div>
-              <div class="customer__info">
-                <h6>kerolos zakaria</h6>
-                <p>keroloszakaria2@gmail.com</p>
-              </div>
+              <router-link to="/" class="">
+                <div class="customer__image">
+                  <img src="https://via.placeholder.com/350x150" alt="" />
+                </div>
+                <div class="customer__info">
+                  <h6>kerolos zakaria</h6>
+                  <p>keroloszakaria2@gmail.com</p>
+                </div>
+              </router-link>
             </li>
             <li class="customer">
-              <div class="customer__image">
-                <img src="https://via.placeholder.com/350x150" alt="" />
-              </div>
-              <div class="customer__info">
-                <h6>kerolos zakaria</h6>
-                <p>keroloszakaria2@gmail.com</p>
-              </div>
+              <router-link to="/" class="active">
+                <div class="customer__image">
+                  <img src="https://via.placeholder.com/350x150" alt="" />
+                </div>
+                <div class="customer__info">
+                  <h6>kerolos zakaria</h6>
+                  <p>keroloszakaria2@gmail.com</p>
+                </div>
+              </router-link>
             </li>
           </ul>
         </div>

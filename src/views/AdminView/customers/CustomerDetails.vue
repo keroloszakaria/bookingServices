@@ -26,9 +26,7 @@
       <v-card-text>
         <v-window v-model="tab">
           <v-window-item value="info"> One </v-window-item>
-
           <v-window-item value="appointments"> Two </v-window-item>
-
           <v-window-item value="gift_certificate"> Three </v-window-item>
           <v-window-item value="payment"> Three </v-window-item>
           <v-window-item value="reviews"> Three </v-window-item>

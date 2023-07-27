@@ -99,7 +99,8 @@ input:-webkit-autofill:active {
 
 .custome__input {
   position: relative;
-  input {
+  input,
+  select {
     padding-left: 35px;
     // &:placeholder-shown {
     //   @include inputNotTyped;

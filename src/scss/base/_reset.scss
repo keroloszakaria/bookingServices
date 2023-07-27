@@ -27,3 +27,13 @@ ul {
 .f-normal {
   font-size: var(--normal-font-size) !important;
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
